@@ -1,29 +1,18 @@
 package linkedlists.test;
 
-import linkedlists.model.Node;
+import linkedlists.service.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
-        //inserting data
-        Node<Integer> first = new Node<>(56);
-        Node<Integer> second = new Node<>(30);
-        Node<Integer> third = new Node<>(70);
 
-        first.next = second;
-        second.next = third;
+        LinkedList<Integer> list = new LinkedList<>();
 
-        Node<Integer> temp = first;
+        //Adding element in node
+        list.addFirst(70);
+        list.addFirst(30);
+        list.addFirst(56);
 
-        //printing linked list
-        while (temp != null) {
-            System.out.print(temp.data);
-
-            if (temp.next != null) {
-                System.out.print(" -> ");
-            }
-
-            temp = temp.next;
-        }
+        list.display();
     }
 }

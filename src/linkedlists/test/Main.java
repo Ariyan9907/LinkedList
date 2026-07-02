@@ -10,8 +10,10 @@ public class Main {
 
         //Adding element in node
         list.addFirst(70);
-        list.addFirst(30);
-        list.addFirst(56);
+        list.addLast(80);
+
+        //inserting after head
+        list.insertAfter(list.head,33);
 
         list.display();
     }

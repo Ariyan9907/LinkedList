@@ -46,6 +46,20 @@ public class LinkedList<T> {
         previousNode.next = newNode;
     }
 
+    //Removing popped node
+    public Node<T> pop() {
+
+        if (head == null) {
+            return null;
+        }
+
+        Node<T> poppedNode = head;
+
+        head = head.next;
+
+        return poppedNode;
+    }
+
 
     //printing list
     public void display(){

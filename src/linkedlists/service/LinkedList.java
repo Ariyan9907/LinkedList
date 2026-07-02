@@ -60,6 +60,34 @@ public class LinkedList<T> {
         return poppedNode;
     }
 
+    //remove last
+    public Node<T> popLast() {
+
+        // If list is empty
+        if (head == null) {
+            return null;
+        }
+
+        // If list has only one node
+        if (head.next == null) {
+            Node<T> temp = head;
+            head = null;
+            return temp;
+        }
+
+        Node<T> current = head;
+        Node<T> previous = null;
+
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+
+        previous.next = null;
+
+        return current;
+    }
+
 
     //printing list
     public void display(){

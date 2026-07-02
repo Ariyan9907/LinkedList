@@ -9,20 +9,18 @@ public class Main {
 
         LinkedList<Integer> list = new LinkedList<>();
 
-        //Adding element in node
-        list.addFirst(70);
-        list.addLast(80);
+        list.addLast(56);
+        list.addLast(30);
+        list.addLast(70);
 
-
-        System.out.println("Before Pop:");
+        System.out.println("Before Pop Last:");
         list.display();
 
-        Node<Integer> removed = list.pop();
+        Node<Integer> removed = list.popLast();
 
         System.out.println("Removed Node : " + removed.data);
 
-        System.out.println("After Pop:");
-
+        System.out.println("After Pop Last:");
         list.display();
     }
 }

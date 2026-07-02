@@ -88,6 +88,19 @@ public class LinkedList<T> {
         return current;
     }
 
+    //searching element
+    public Node<T> search(T key) {
+        Node<T> temp = head;
+
+        while (temp != null) {
+            if (temp.data.equals(key)) {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+
 
     //printing list
     public void display(){

@@ -88,6 +88,48 @@ public class LinkedList<T> {
         return current;
     }
 
+    public void delete(T key) {
+
+        if (head == null) {
+            return;
+        }
+
+        // If the first node itself is to be deleted
+        if (head.data.equals(key)) {
+            head = head.next;
+            return;
+        }
+
+        Node<T> current = head;
+        Node<T> previous = null;
+
+        while (current != null && !current.data.equals(key)) {
+            previous = current;
+            current = current.next;
+        }
+
+        // Key not found
+        if (current == null) {
+            return;
+        }
+
+        previous.next = current.next;
+    }
+
+    public int size() {
+
+        int count = 0;
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
     //searching element
     public Node<T> search(T key) {
         Node<T> temp = head;

@@ -13,14 +13,20 @@ public class Main {
         list.addLast(30);
         list.addLast(70);
 
-        System.out.println("Before Pop Last:");
+
+//        list.display();
+//        System.out.println(list.search(70));
+
+        System.out.println("Before Insertion:");
         list.display();
 
-        Node<Integer> removed = list.popLast();
+        Node<Integer> node = list.search(30);
 
-        System.out.println("Removed Node : " + removed.data);
+        if (node != null) {
+            list.insertAfter(node, 40);
+        }
 
-        System.out.println("After Pop Last:");
+        System.out.println("After Insertion:");
         list.display();
     }
 }
